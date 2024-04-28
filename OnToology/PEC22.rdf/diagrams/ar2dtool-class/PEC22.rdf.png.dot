@@ -1,0 +1,57 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:FoodService" "base:Entertaiment" "base:Bussines" "base:Country" "base:Executive" "base:SeatConfort" "base:Satisfied" "base:ServiceOnBoard" "untitled-ontology-6:SatisfactionRating" "base:Connectivity" "base:SeatType" "base:FirstClass" "base:Economic" "base:DatePublished" "base:Couple" "2299b6dd:18f2495a6bc:-7ffa" "base:Family" "base:Verification" "base:GroundService" "base:Leisure" "base:Passenger" "2299b6dd:18f2495a6bc:-7ff4" "base:Title" "base:Review" "base:Solo" "base:Origin" "base:Dissatisfied" "base:PartiallySatisfied" "base:Airline" "base:Destination" ; /*classes style*/
+	"NULL" -> "base:FirstClass" [ label = "rdf:first" ];
+	"NULL" -> "2299b6dd:18f2495a6bc:-7ff4" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:hasTypeSeat" [ label = "owl:onProperty" ];
+	"NULL" -> "2299b6dd:18f2495a6bc:-7ff1" [ label = "rdf:rest" ];
+	"NULL" -> "base:hasCountry" [ label = "owl:onProperty" ];
+	"NULL" -> "2299b6dd:18f2495a6bc:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "2299b6dd:18f2495a6bc:-7ff9" [ label = "owl:unionOf" ];
+	"NULL" -> "base:Country" [ label = "owl:onClass" ];
+	"NULL" -> "base:Solo" [ label = "rdf:first" ];
+	"NULL" -> "base:hasDatePublished" [ label = "owl:onProperty" ];
+	"NULL" -> "base:hasTypeLeisure" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Family" [ label = "rdf:first" ];
+	"NULL" -> "base:Couple" [ label = "rdf:first" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "base:Economic" [ label = "rdf:first" ];
+	"NULL" -> "base:Review" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "2299b6dd:18f2495a6bc:-7ffa" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "2299b6dd:18f2495a6bc:-7ff2" [ label = "rdf:rest" ];
+	"NULL" -> "2299b6dd:18f2495a6bc:-7ff3" [ label = "owl:unionOf" ];
+	"NULL" -> "2299b6dd:18f2495a6bc:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "base:Executive" [ label = "rdf:first" ];
+	"base:Destination" -> "base:Origin" [ label = "owl:disjointWith" ];
+	"base:Executive" -> "base:FirstClass" [ label = "owl:disjointWith" ];
+	"base:PartiallySatisfied" -> "base:Satisfied" [ label = "owl:disjointWith" ];
+	"base:Bussines" -> "base:Leisure" [ label = "owl:disjointWith" ];
+	"base:Economic" -> "base:FirstClass" [ label = "owl:disjointWith" ];
+	"base:Economic" -> "base:Executive" [ label = "owl:disjointWith" ];
+	"base:hasDestination" -> "base:hasOrigin" [ label = "owl:propertyDisjointWith" ];
+	"base:Connectivity" -> "base:SeatConfort" [ label = "owl:disjointWith" ];
+	"base:Connectivity" -> "base:Entertaiment" [ label = "owl:disjointWith" ];
+	"base:Family" -> "base:Solo" [ label = "owl:disjointWith" ];
+	"base:Dissatisfied" -> "base:Satisfied" [ label = "owl:disjointWith" ];
+	"base:Dissatisfied" -> "base:PartiallySatisfied" [ label = "owl:disjointWith" ];
+	"base:FoodService" -> "base:ServiceOnBoard" [ label = "owl:disjointWith" ];
+	"base:FoodService" -> "base:GroundService" [ label = "owl:disjointWith" ];
+	"base:Couple" -> "base:Solo" [ label = "owl:disjointWith" ];
+	"base:Couple" -> "base:Family" [ label = "owl:disjointWith" ];
+	"base:Entertaiment" -> "base:SeatConfort" [ label = "owl:disjointWith" ];
+	"base:GroundService" -> "base:ServiceOnBoard" [ label = "owl:disjointWith" ];
+	"untitled-ontology-6:SatisfactionRating" -> "xsd:integer" [ label = "untitled-ontology-6:hasRating" ];
+	"base:Passenger" -> "base:Leisure" [ label = "base:hasTypeLeisure" ];
+	"base:Passenger" -> "base:SeatType" [ label = "base:hasTypeSeat" ];
+	"base:Verification" -> "xsd:boolean" [ label = "base:hasVerification" ];
+	"base:Review" -> "base:SeatType" [ label = "base:hasSeat" ];
+	"base:Review" -> "base:Airline" [ label = "base:hasAirline" ];
+	"base:Destination" -> "xsd:string" [ label = "base:hasDestination" ];
+	"base:Review" -> "base:DatePublished" [ label = "base:hasDatePublished" ];
+	"base:Passenger" -> "base:Country" [ label = "base:hasCountry" ];
+	"base:DatePublished" -> "xsd:date" [ label = "base:hasAPublicationDate" ];
+	"base:Origin" -> "xsd:string" [ label = "base:hasOrigin" ];
+	"base:Title" -> "xsd:string" [ label = "base:hasTitle" ];
+
+}
